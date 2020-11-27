@@ -36,15 +36,9 @@ function App() {
           <Content style={{ padding: '0 50px' }}>
             <div className="site-layout-content">
               <Switch>
-                <Route path="/beers">
-                  <Beers />
-                </Route>
-                <Route path="/random-beer">
-                  <RandomBeer />
-                </Route>
-                <Route path="/new-beer">
-                  <NewBeer />
-                </Route>
+                <Route component={Beers} path="/beers" exact></Route>
+                <Route path="/random-beer"></Route>
+                <Route path="/new-beer"></Route>
                 <Route path="/">
                   <Home />
                 </Route>
