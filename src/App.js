@@ -24,55 +24,45 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/beers">beers</Link>
-            </li>
-            <li>
-              <Link to="/random-beer">random-beer</Link>
-            </li>
-            <li>
-              <Link to="/new-beer">new-beer</Link>
-            </li>
-          </ul>
-        </nav>
-        <hr />
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/beers">
-            <Beers />
-          </Route>
-          <Route path="/random-beer">
-            <RandomBeer />
-          </Route>
-          <Route path="/new-beer">
-            <NewBeer />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+
         <Layout className="layout">
           <Header>
             <div className="logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-              <Menu.Item key="1">nav 1</Menu.Item>
-              <Menu.Item key="2">nav 2</Menu.Item>
-              <Menu.Item key="3">nav 3</Menu.Item>
+              <Menu.Item key="1">
+                {' '}
+                <Link to="/">Home</Link>
+              </Menu.Item>
+              <Menu.Item key="2">
+                <Link to="/beers">beers</Link>
+              </Menu.Item>
+              <Menu.Item key="3">
+                <Link to="/random-beer">random-beer</Link>
+              </Menu.Item>
+              <Menu.Item key="4">
+                <Link to="/new-beer">new-beer</Link>
+              </Menu.Item>
             </Menu>
           </Header>
           <Content style={{ padding: '0 50px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-              <Breadcrumb.Item>List</Breadcrumb.Item>
-              <Breadcrumb.Item>App</Breadcrumb.Item>
-            </Breadcrumb>
-            <div className="site-layout-content">Content</div>
+            <div className="site-layout-content">
+              <Switch>
+                <Route path="/beers">
+                  <Beers />
+                </Route>
+                <Route path="/random-beer">
+                  <RandomBeer />
+                </Route>
+                <Route path="/new-beer">
+                  <NewBeer />
+                </Route>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             Ant Design ©2018 Created by Ant UED
