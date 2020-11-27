@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb, Image } from 'antd';
 import './App.css';
 import Home from './pages/Home';
 import Beers from './pages/Beers';
@@ -22,7 +22,14 @@ function App() {
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
               <Menu.Item key="1">
                 {' '}
-                <Link to="/">Home</Link>
+                <Link to="/">
+                  <Image
+                    width={100}
+                    preview={false}
+                    src="https://user-images.githubusercontent.com/23629340/40707029-cb2fce12-63ef-11e8-939c-f673ff3b965d.png"
+                  />
+                  Home
+                </Link>
               </Menu.Item>
             </Menu>
           </Header>
