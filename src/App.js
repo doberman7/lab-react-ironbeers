@@ -2,24 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import './App.css';
+import Home from './pages/Home';
+import Beers from './pages/Beers';
+import NewBeer from './pages/NewBeer';
+import RandomBeer from './pages/RandomBeer';
 
 const { Header, Content, Footer } = Layout;
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function Beers() {
-  return <h2>Beers</h2>;
-}
-
-function RandomBeer() {
-  return <h2>RandomBeer</h2>;
-}
-
-function NewBeer() {
-  return <h2>NewBeer</h2>;
-}
 function App() {
   return (
     <Router>
