@@ -2,35 +2,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Home() {
-  const students = [
+  const beersinfo = [
     {
-      name: 'Ayhan',
+      name: 'Beers',
       description: 'qwliuehrlqiweurlqiwuhe',
       id: 1,
     },
     {
-      name: 'Fran',
+      name: 'Newbeer',
       description: 'qwliuehrlqiweurlqiwuhe',
       id: 2,
     },
     {
-      name: 'Maria',
+      name: 'RandomBeer',
       description: 'qwliuehrlqiweurlqiwuhe',
       id: 3,
-    },
-    {
-      name: 'Isa',
-      description: 'qwliuehrlqiweurlqiwuhe',
-      id: 4,
     },
   ];
   return (
     <div>
-      <h1 className="title">Students</h1>
+      <h1 className="title">Beer Topics</h1>
       <ul>
-        {students.map((student) => (
+        {beersinfo.map((beerElement) => (
           <li>
-            <Link to={`/student/${student.id}`}>{student.name}</Link>
+            <Link to={`/beerElement/${beerElement.name}`}>
+              {beerElement.name}
+            </Link>
           </li>
         ))}
       </ul>

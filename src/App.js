@@ -24,15 +24,6 @@ function App() {
                 {' '}
                 <Link to="/">Home</Link>
               </Menu.Item>
-              <Menu.Item key="2">
-                <Link to="/beers">beers</Link>
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Link to="/random-beer">random-beer</Link>
-              </Menu.Item>
-              <Menu.Item key="4">
-                <Link to="/new-beer">new-beer</Link>
-              </Menu.Item>
             </Menu>
           </Header>
           <Content style={{ padding: '0 50px' }}>
